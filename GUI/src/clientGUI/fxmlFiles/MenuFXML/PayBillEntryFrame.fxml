@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="30.0" prefHeight="450.0" prefWidth="550.0" 
+      styleClass="payment-root"
+      stylesheets="@../../cssStyle/GlobalStyles.css" 
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="clientGUI.Controllers.MenuControlls.PayBillEntryController">
+    
+    <children>
+        <Label text="Payment Verification" styleClass="payment-header"/>
+        
+        <VBox alignment="CENTER" spacing="20.0" styleClass="bill-card" maxWidth="400.0">
+            <children>
+                <Label text="Please enter your Confirmation Code:" styleClass="info-label" style="-fx-font-size: 16px;"/>
+                
+                <TextField fx:id="txtCode" maxWidth="280.0" promptText="e.g. 1111" 
+                           styleClass="modern-text-field"/>
+             
+            </children>
+            <padding>
+                <Insets top="40" right="30" bottom="40" left="30"/>
+            </padding>
+        </VBox>
+
+        <HBox alignment="CENTER" spacing="20.0">
+            <Button fx:id="btnBack" text="Back" onAction="#onBackClicked" 
+                    styleClass="secondary-button"/>
+            <Button fx:id="btnVerify" text="Verify &amp; Proceed" onAction="#onVerifyClicked" 
+                    styleClass="pay-button"/>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+</VBox>

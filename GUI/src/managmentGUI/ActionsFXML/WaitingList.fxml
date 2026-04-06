@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="25.0" layoutY="20.0" text="Customer Waiting List" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      
+      <TableView fx:id="waitingTable" layoutX="25.0" layoutY="65.0" prefHeight="430.0" prefWidth="680.0" style="-fx-border-color: #bdc3c7;">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="200.0" text="Confirmation Code" />
+          <TableColumn fx:id="colTime" prefWidth="280.0" text="Entry Time" />
+          <TableColumn fx:id="colUserId" prefWidth="198.0" text="User ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

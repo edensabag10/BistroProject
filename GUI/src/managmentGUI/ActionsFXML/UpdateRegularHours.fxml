@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="15.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Regular Operating Hours Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <Label text="NOTE: To set the restaurant as CLOSED, please enter '00:00' for both opening and closing times." textFill="#e67e22">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      
+      <Label text="Double-click a cell to edit opening/closing times." textFill="#7f8c8d" />
+      
+      <TableView fx:id="tableHours" prefHeight="300.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colDay" prefWidth="150.0" text="Day of Week" />
+          <TableColumn fx:id="colOpen" prefWidth="150.0" text="Opening Time" />
+          <TableColumn fx:id="colClose" prefWidth="150.0" text="Closing Time" />
+        </columns>
+      </TableView>
+      
+      <Button mnemonicParsing="false" onAction="#updateRegularHours" prefHeight="40.0" prefWidth="250.0" 
+              style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" 
+              text="Save All Changes to DB" />
+   </children>
+</VBox>

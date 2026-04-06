@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="20.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Special Events &amp; Holiday Hours" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <GridPane hgap="10.0" vgap="15.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Select Date:" GridPane.rowIndex="0" />
+            <DatePicker fx:id="dpSpecialDate" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Opening Time:" GridPane.rowIndex="1" />
+            <ComboBox fx:id="comboSpecialOpen" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Closing Time:" GridPane.rowIndex="2" />
+            <ComboBox fx:id="comboSpecialClose" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      
+      <Separator prefWidth="200.0" />
+      
+      <VBox spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateSpecialHours" prefHeight="40.0" prefWidth="250.0" 
+                    style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold;" 
+                    text="Apply Special Hours" />
+
+            <Button mnemonicParsing="false" onAction="#deleteAllSpecialHours" prefHeight="40.0" prefWidth="250.0" 
+                    style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;" 
+                    text="Delete All Special Hours" />
+            
+            <Label text="* To set the restaurant as CLOSED for this date, select '00:00' for both times." textFill="#e74c3c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            
+            <Label text="* This will override regular hours for the selected date only." textFill="#7f8c8d">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

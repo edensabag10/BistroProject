@@ -1,0 +1,338 @@
+/* ==========================================================================
+   GlobalStyles.css - The Master Style Sheet for Bistro System (2025)
+   ========================================================================== */
+
+/* --- 1. ROOT & GLOBAL SETTINGS --- */
+/* הגדרות כלליות לכל חלון האפליקציה */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #000000);
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. TYPOGRAPHY & LABELS --- */
+/* כותרות וטקסטים רגילים */
+.label {
+    -fx-text-fill: #ecf0f1; /* לבן-אפרפר להקלה על העיניים */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 2, 0, 0, 1);
+}
+
+/* כותרות גדולות (Header) למסכים */
+.header-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db; /* כחול בולט */
+    -fx-effect: dropshadow(gaussian, black, 5, 0, 0, 2);
+    -fx-padding: 10 0 20 0;
+}
+
+/* --- 3. FORM ELEMENTS (Inputs) --- */
+/* שדות טקסט (TextField) */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+
+/* אזור טקסט גדול (TextArea / Log) */
+.text-area {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-control-inner-background: #ecf0f1; 
+    -fx-background-radius: 8;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 8;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* --- 4. BASE BUTTON STYLE --- */
+/* הגדרות בסיסיות לכל כפתור במערכת */
+.button {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 12; /* פינות מעוגלות במידה נעימה */
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 2);
+}
+
+/* אפקט תנועה כללי לכל כפתור בעת מעבר עכבר */
+.button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* --- 5. SPECIFIC BUTTON COLOR CLASSES --- */
+/* שימוש דרך: styleClass="btn-xxx" ב-FXML */
+
+/* ירוק - הרשמה, אישור, עדכון (Success) */
+.btn-update, .btn-new, .btn-register { 
+    -fx-background-color: #2ecc71; 
+}
+.btn-update:hover, .btn-new:hover, .btn-register:hover { 
+    -fx-background-color: #27ae60; 
+}
+
+/* כחול - צפייה, פרטים, התחברות (Info) */
+.btn-view, .btn-login { 
+    -fx-background-color: #3498db; 
+}
+.btn-view:hover, .btn-login:hover { 
+    -fx-background-color: #2980b9; 
+}
+
+/* אפור/כהה - ביטול (Cancel) */
+.btn-cancel { 
+    -fx-background-color: #212121; 
+}
+.btn-cancel:hover { 
+    -fx-background-color: #424242; 
+}
+
+.btn-pay { 
+    -fx-background-color: #f1c40f; 
+    -fx-text-fill: white;
+}
+
+.btn-pay:hover { 
+    -fx-background-color: #f39c12; /* זהב כהה יותר במעבר עכבר */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* כתום - יציאה מהמסך (Warning/Transition) */
+.btn-exit, .btn-back { 
+    -fx-background-color: #e67e22; 
+}
+.btn-exit:hover, .btn-back:hover { 
+    -fx-background-color: #d35400; 
+}
+
+/* אדום - התנתקות (Danger) */
+.btn-logout { 
+    -fx-background-color: #e74c3c; 
+}
+.btn-logout:hover { 
+    -fx-background-color: #c0392b; 
+}
+
+.save-edit-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.cancel-edit-button {
+    -fx-background-color: #E53935;
+    -fx-text-fill: white;
+}
+
+.title-edit-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;   /* או #FFFFFF */
+}
+
+.title-history-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.back-btn-history {
+    -fx-background-color: #E53935;   /* אדום */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-padding: 8 20 8 20;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+    -fx-effect: null;  
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: black;        
+    -fx-font-size: 14px;         
+    -fx-font-weight: normal;
+    -fx-effect: null;            
+}
+
+/* סגול/טורקיז - היסטוריה ופרופיל */
+.btn-history { -fx-background-color: #9b59b6; }
+.btn-history:hover { -fx-background-color: #8e44ad; }
+
+.btn-profile { -fx-background-color: #16a085; }
+.btn-profile:hover { -fx-background-color: #1abc9c; }
+
+
+/* רקע כללי של המסך */
+.payment-root {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: "Segoe UI", system-ui;
+}
+
+/* כותרת */
+.payment-header {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}
+
+/* כרטיס החשבונית */
+.bill-card {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 8);
+}
+
+/* תוויות מידע */
+.info-label {
+    -fx-text-fill: #636e72;
+    -fx-font-size: 14px;
+}
+
+.info-value {
+    -fx-text-fill: #2d3436;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* תוויות מחיר */
+.price-label {
+    -fx-text-fill: #b2bec3;
+    -fx-font-size: 15px;
+}
+
+.price-value {
+    -fx-text-fill: #2d3436;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.discount-value {
+    -fx-text-fill: #00b894; /* ירוק הנחה */
+    -fx-font-weight: bold;
+}
+
+/* אזור הסכום הסופי */
+.total-container {
+    -fx-background-color: #fff9f1;
+    -fx-padding: 15px;
+    -fx-background-radius: 10px;
+}
+
+.total-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}
+
+.total-price {
+    -fx-font-size: 26px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #e67e22; /* כתום ביסטרו */
+}
+
+/* כפתור תשלום */
+.pay-button {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 60;
+    -fx-background-radius: 50px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(230,126,34,0.3), 10, 0, 0, 5);
+}
+
+.pay-button:hover {
+    -fx-background-color: #d35400;
+}
+
+.bill-separator {
+    -fx-opacity: 0.3;
+}
+
+/* עיצוב תיבת הטקסט */
+.modern-text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 12px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2d3436;
+    -fx-alignment: CENTER;
+}
+
+.modern-text-field:focused {
+    -fx-border-color: #e67e22; /* צבע כתום ביסטרו בזמן פוקוס */
+    -fx-border-width: 2px;
+}
+
+/* כפתור משני (Back) */
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #636e72;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #b2bec3;
+    -fx-border-radius: 50px;
+    -fx-padding: 10 40;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #f1f2f6;
+    -fx-text-fill: #2d3436;
+    -fx-border-color: #2d3436;
+}
+
+.terminal-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.btn-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.btn-warning {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.btn-success {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Join Waiting List – Indigo (Unique) */
+.btn-waiting {
+    -fx-background-color: #3f51b5;   /* אינדיגו */
+    -fx-text-fill: white;
+}
+
+.btn-waiting:hover {
+    -fx-background-color: #303f9f;   /* אינדיגו כהה */
+}
+
+

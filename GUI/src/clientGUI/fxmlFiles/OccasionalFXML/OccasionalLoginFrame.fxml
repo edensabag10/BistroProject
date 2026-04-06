@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="650.0" prefWidth="400.0" stylesheets="@../../cssStyle/GlobalStyles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUI.Controllers.OccasionalControlls.OccasionalLoginController">
+   <children>
+      <VBox fx:id="vboxMain" alignment="CENTER" layoutX="50.0" layoutY="30.0" prefWidth="300.0" spacing="15.0">
+         <children>
+            <Label styleClass="header-label" text="Occasional Login" />
+            
+            <VBox fx:id="paneLogin" spacing="10.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Username:" />
+                        <TextField fx:id="txtUsername" promptText="Enter username" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Phone or Email:" />
+                        <TextField fx:id="txtContact" promptText="Enter phone/email" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnLogin" maxWidth="Infinity" onAction="#clickLogin" styleClass="btn-login" text="Login" />
+                  <Button fx:id="btnForgot" maxWidth="Infinity" onAction="#showForgotArea" style="-fx-background-color: transparent; -fx-text-fill: #3498db; -fx-underline: true;" text="I forgot my username" />
+                  <Button fx:id="btnRegister" maxWidth="Infinity" onAction="#clickRegister" styleClass="btn-register" text="Register New User" />
+                  <Button fx:id="btnBack" maxWidth="Infinity" onAction="#clickBack" styleClass="btn-back" text="Back" />
+               </children>
+            </VBox>
+
+            <VBox fx:id="paneForgot" managed="false" spacing="10.0" visible="false">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Reset Username" />
+                  <TextField fx:id="txtForgotContact" promptText="Enter registered Phone/Email" />
+                  <TextField fx:id="txtNewUsername" promptText="Enter NEW username" />
+                  <Button fx:id="btnSubmitForgot" maxWidth="Infinity" onAction="#clickSubmitForgot" styleClass="btn-update" text="Update Username" />
+                  <Button maxWidth="Infinity" onAction="#hideForgotArea" styleClass="btn-cancel" text="Cancel" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <TextArea fx:id="txtLog" editable="false" layoutX="25.0" layoutY="500.0" prefHeight="120.0" prefWidth="350.0" wrapText="true" />
+   </children>
+</AnchorPane>

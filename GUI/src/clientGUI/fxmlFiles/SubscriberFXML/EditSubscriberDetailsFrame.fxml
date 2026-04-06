@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="293.0" prefWidth="414.0" stylesheets="@../../cssStyle/GlobalStyles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUI.Controllers.SubscriberControlls.EditSubscriberDetailsController">
+   <children>
+      <Label layoutX="143.0" layoutY="25.0" styleClass="title-edit-label" text="Edit Details" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="30.0" layoutY="61.0" text="Please enter the new details you would like to update." />
+      <Label layoutX="29.0" layoutY="103.0" text="User Name" />
+      <Label layoutX="30.0" layoutY="144.0" text="Phone" />
+      <Label layoutX="33.0" layoutY="187.0" text="Email" />
+      <TextField fx:id="txtUsername" layoutX="123.0" layoutY="94.0" prefHeight="35.0" prefWidth="264.0" />
+      <TextField fx:id="txtPhone" layoutX="123.0" layoutY="135.0" prefHeight="35.0" prefWidth="264.0" />
+      <TextField fx:id="txtEmail" layoutX="123.0" layoutY="178.0" prefHeight="35.0" prefWidth="264.0" />
+      <Button fx:id="btnSave" layoutX="123.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickSave" prefHeight="34.0" prefWidth="101.0" styleClass="save-edit-button" text="Save" />
+      <Button fx:id="btnCancel" layoutX="286.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickCancel" prefHeight="34.0" prefWidth="101.0" styleClass="cancel-edit-button" text="Cancel" />
+   </children>
+</AnchorPane>

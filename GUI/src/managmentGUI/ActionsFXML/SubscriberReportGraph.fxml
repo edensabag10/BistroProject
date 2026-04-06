@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="managmentGUI.SubReportGraphController">
+   <children>
+      <BarChart fx:id="subBarChart" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="650.0" title="Reservations vs Waiting List">
+        <xAxis>
+          <CategoryAxis fx:id="xAxis" label="Day of Month" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Count" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

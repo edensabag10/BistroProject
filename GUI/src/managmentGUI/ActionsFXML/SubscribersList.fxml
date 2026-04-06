@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="20.0" layoutY="15.0" text="Subscriber Management List" textFill="#2c3e50">
+         <font><Font name="System Bold" size="18.0" /></font>
+      </Label>
+      <TableView fx:id="tableSubscribers" layoutX="15.0" layoutY="60.0" prefHeight="370.0" prefWidth="710.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="100.0" text="User ID" />
+          <TableColumn fx:id="colSubId" prefWidth="120.0" text="Subscriber ID" />
+          <TableColumn fx:id="colUsername" prefWidth="200.0" text="Username" />
+          <TableColumn fx:id="colQrCode" prefWidth="280.0" text="QR Code" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

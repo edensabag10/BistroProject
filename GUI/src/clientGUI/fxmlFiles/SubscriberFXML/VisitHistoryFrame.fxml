@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@../../cssStyle/GlobalStyles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUI.Controllers.SubscriberControlls.VisitHistoryController">
+   <children>
+      <Label layoutX="260.0" layoutY="20.0" styleClass="header-label" text="Visit History" />
+      <TableView fx:id="visitsTable" layoutX="15.0" layoutY="70.0" prefHeight="260.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="codeCol" prefWidth="130.0" text="Confirmation Code" />
+          <TableColumn fx:id="tableCol" prefWidth="100.0" text="Table ID" />
+          <TableColumn fx:id="billCol" prefWidth="100.0" text="Bill ID" />
+          <TableColumn fx:id="timeCol" prefWidth="180.0" text="Start Time" />
+          <TableColumn fx:id="statusCol" prefWidth="110.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="275.0" layoutY="350.0" onAction="#clickBack" prefHeight="30.0" prefWidth="100.0" text="Close" />
+   </children>
+</AnchorPane>

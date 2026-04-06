@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="20.0" style="-fx-padding: 20;" 
+      xmlns="http://javafx.com/javafx/8" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="managmentGUI.ManageTablesController">   <children>
+      <Label text="Restaurant Tables Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <TableView fx:id="tableTablesView" prefHeight="350.0" prefWidth="740.0">
+        <columns>
+          <TableColumn fx:id="colTableId" prefWidth="100.0" text="Table ID" />
+          <TableColumn fx:id="colCapacity" prefWidth="150.0" text="Capacity" />
+          <TableColumn fx:id="colStatus" prefWidth="150.0" text="Status" />
+          <TableColumn fx:id="colDeleteAction" prefWidth="200.0" text="Actions" />
+        </columns>
+      </TableView>
+
+      <Separator prefWidth="200.0" />
+
+      <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #f8f9fa; -fx-padding: 10; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+         <children>
+            <Label text="Add New Table:" style="-fx-font-weight: bold;" />
+            <TextField fx:id="txtNewTableCapacity" prefWidth="150.0" promptText="Enter Capacity" />
+            <Button mnemonicParsing="false" onAction="#onAddTableClicked" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Table" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Current Seated Diners">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="dinersTable" layoutX="20.0" layoutY="60.0" prefHeight="320.0" prefWidth="560.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="140.0" text="Confirmation Code" />
+          <TableColumn fx:id="colTable" prefWidth="100.0" text="Table ID" />
+          <TableColumn fx:id="colTime" prefWidth="200.0" text="Arrival Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

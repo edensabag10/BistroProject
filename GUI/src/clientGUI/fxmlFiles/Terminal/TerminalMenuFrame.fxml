@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="417.0" stylesheets="@../../cssStyle/GlobalStyles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="terminalGUI.Controllers.TerminalControllers.TerminalMenuController">
+
+    <children>
+
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="417.0" spacing="25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <Label styleClass="terminal-title" text="Customer Service Terminal" />
+
+            <Button fx:id="btnArrival" onAction="#handleArrival" prefHeight="34.0" prefWidth="222.0" styleClass="btn-success" text="I’m Here" />
+
+            <Button fx:id="btnManageReservation" onAction="#handleManageReservation" prefHeight="34.0" prefWidth="225.0" styleClass="btn-warning" text="Manage Reservation" />
+
+            <Button fx:id="btnJoinWaitingList" onAction="#handleJoinWaitingList" prefHeight="34.0" prefWidth="228.0" styleClass="btn-waiting" text="Join Waiting List" />
+
+            <Button fx:id="btnLostConfirmationCode" onAction="#handleLostConfirmationCode" prefHeight="34.0" prefWidth="225.0" style="-fx-background-color: #f1948a;" styleClass="btn-danger" text="Lost Confirmation Code" />
+         <Button fx:id="bthLogOut" mnemonicParsing="false" onAction="#clickLogOut" prefHeight="34.0" prefWidth="217.0" style="-fx-background-color: #c0392b;" text="LogOut" />
+
+        </VBox>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_CENTER" spacing="30.0" prefHeight="550.0" prefWidth="500.0" 
+      styleClass="payment-root"
+      stylesheets="@../../cssStyle/GlobalStyles.css"  
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="clientGUI.Controllers.MenuControlls.PaymentUIController">
+    
+    <children>
+        <Label text="Final Bill Summary" styleClass="payment-header"/>
+        
+        <VBox styleClass="bill-card" spacing="20.0">
+            <children>
+                <GridPane vgap="12.0" hgap="20.0" alignment="CENTER">
+                    <children>
+                        <Label text="Table Number:" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <Label fx:id="lblTableId" text="--" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        
+                        <Label text="Start Time:" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <Label fx:id="lblStartTime" text="--" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <Separator styleClass="bill-separator"/>
+
+                <GridPane vgap="12.0" hgap="20.0" alignment="CENTER">
+                    <children>
+                        <Label text="Base Amount:" styleClass="price-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <Label fx:id="lblBaseAmount" text="0.00 ₪" styleClass="price-value" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                        <Label text="Member Discount:" styleClass="price-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <Label fx:id="lblDiscount" text="0%" styleClass="discount-value" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <HBox alignment="CENTER" spacing="15.0" styleClass="total-container">
+                    <children>
+                        <Label text="Total to Pay:" styleClass="total-label"/>
+                        <Label fx:id="lblFinalAmount" text="0.00 ₪" styleClass="total-price"/>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+        </VBox>
+
+        <Button fx:id="btnConfirmPay" text="Confirm &amp; Pay Now" onAction="#onPayClicked" styleClass="pay-button"/>
+    </children>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+</VBox>
