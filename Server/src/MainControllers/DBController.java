@@ -82,7 +82,6 @@ public class DBController {
             "jdbc:mysql://localhost:3306/prototypedb?allowLoadLocalInfile=true&serverTimezone=Asia/Jerusalem&useSSL=false&allowPublicKeyRetrieval=true",
             "root",
             "Eden2701@"
-
         );}
 
     
